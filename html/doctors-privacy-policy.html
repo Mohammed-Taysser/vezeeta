@@ -13,18 +13,18 @@
             <!-- for IE -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <!--[if lt IE 9]>
-            <script src="js/html5shiv.min.js"></script>
-            <script src="js/respond.min.js"></script>
+        <script src="../js/html5shiv.min.js"></script>
+        <script src="../js/respond.min.js"></script>
         <![endif]-->
 
         <!-- style sheet-->
-        <link rel="stylesheet" href="css/bootstrap.min.css"/>
-        <link rel="stylesheet" href="css/nice-select.css"/>
-        <link rel="stylesheet" href="css/owl.carousel.min.css"/>
-        <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="../css/nice-select.css"/>
+        <link rel="stylesheet" href="../css/owl.carousel.min.css"/>
+        <link rel="stylesheet" href="../css/style.css"/>
 
         <!-- icon tap -->
-        <link rel="icon" href="images/favicon.ico" type="image/icon">
+        <link rel="icon" href="../images/favicon.ico" type="image/icon">
         <style></style>
     </head>
     <body>
@@ -32,7 +32,7 @@
     <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top py-3">
         <div class="container">
             <a class="navbar-brand" href="#">
-            <img src="images/favicon.ico" width="30" height="30" class="d-inline-block align-top" alt=""><span class="logo-text h4">ATOM</span></a>
+            <img src="../images/favicon.ico" width="30" height="30" class="d-inline-block align-top" alt=""><span class="logo-text h4">ATOM</span></a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -49,26 +49,26 @@
         </div>
     </nav>
 
-        <div class="border p-3 rounded" style="margin: 100px auto;">
+    <div class="border p-3 rounded" style="margin: 100px auto;">
         <div class="container">
             <h2 class="my-3 font-weight-bold ">Better Healthcare for a Better Life</h2>
             <h3 class="my-3 text-muted text-decoration-none">Book online or call <span class="text-danger mx-1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
 </svg></span> <a href="tel:16676" class="text-dark">16676</a></h3>
             <form action="" method="get">
-                <div class="row justify-content-center">
-                    <div class="col-md-6 my-3">
+                <div class="row">
+                    <div class="col-lg-3 my-3">
                          <div class="input-search">
                           <label class="sr-only" for="doctor-name-search">Doctor Name</label>
                           <div class="input-group mb-2">
                             <div class="input-group-prepend">
-                              <div class="input-group-text bg-transparent" style="border-color: #e8e8e8"><img src="images/stethoscope-svg.jpeg" alt="stethoscope" style="width: 19px;"></div>
+                              <div class="input-group-text bg-transparent" style="border-color: #e8e8e8"><img src="../images/stethoscope-svg.jpeg" alt="stethoscope" style="width: 19px;"></div>
                             </div>
                             <input type="text" class="form-control form-control-lg" id="doctor-name-search" placeholder="Doctor Name" name="doctor_name" style="border-color: #e8e8e8">
                           </div>
                         </div>
                     </div>
-                    <div class="col-md-6 my-3">
+                    <div class="col-lg-3 my-3">
                         <div class="select-city ">
                         <label for="select-city" class="d-none"></label>
                             <select id="select-city" class="wide" name="city_select">
@@ -79,18 +79,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-md-6 my-3">
-                        <div class="select-city ">
-                        <label for="select-specialise" class="d-none"></label>
-                            <select id="select-specialise" class="wide" name="specialise_select">
-                              <option value="3" disabled selected>specialise select</option>
-                              <option value="1">Some option</option>
-                              <option value="2">Another option</option>
-                              <option value="4">more option</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-6 my-3">
+                    <div class="col-lg-3 my-3">
                         <div class="select-area ">
                     <label for="select-area" class="d-none"></label>
                         <select id="select-area" class="wide" name="area_select">
@@ -101,7 +90,7 @@
                         </select>
                     </div>
                     </div>
-                    <div class="col-md-6 my-3">
+                    <div class="col-lg-3 my-3">
                         <div class="send-button ">
                         <button type="submit" class="btn transition btn-outline-primary btn-lg btn-block"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search position-relative mr-1" style="top: -3px;" viewBox="0 0 16 16">
   <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
@@ -113,39 +102,24 @@
         </div>
     </div>
 
-
     <div class="terms-use">
         <div class="container">
-            <h3 class="my-3 text-primary">Privacy Policy</h3>
-            <p class="text-muted">Thank you for using Vezeeta. Your trust is important to us and we are committed to protecting the privacy and security of your personal information. The information you shared with us helps us to provide a great experience with Vezeeta. This Privacy Policy describes our privacy practices for all Services we offer worldwide. The term “Vezeeta”, “us” or “we” refer to Vezeeta LLC and the term “User”, “you”, “yours” refer to yourself as the User of Vezeeta’s Services This Privacy Policy, together with the Terms of Use, set forth the general rules and policies governing your use of our platform. Depending on your activities when visiting our platform, you may be required to agree to additional terms and conditions.</p>
-            <ul class="text-muted">
-                <li>
-                    <h4 class="my-3">Information We Collect</h4>
-                    <p class="">1.1. Vezeeta is committed to maintaining privacy protections for its Users. Our Privacy Policy is designated to help you understand how we collect, use and safeguard the information you provide to us. When you visit Vezeeta, we automatically collect certain information about your device, including information about your web browser, IP address, time zone, and some of the cookies that are installed on your device. Additionally, as you browse the Site, we collect information about the individual web pages or doctors that you view, what websites or search terms referred you to Vezeeta, and information about how you interact with Vezeeta.</p>
-                    <p class="">1.2. We also collect information from you when you register on Vezeeta’s Website, book a doctor’s appointment or subscribe to our newsletter. When booking or registering on our Website, as appropriate, you may be asked to enter your name, e-mail address, mailing address, phone number, and date of birth (“Personal Information”).</p>
-                </li>
-                <li>
-                    <h4 class="my-3">How We Use Your Data </h4>
-                    <p class=""> 2.1 We use some of the information we collect to help us screen for potential risk and fraud (in particular, your IP address), and more generally to improve and optimize Vezeeta (for example, by generating analytics about how our customers browse and interact with the site or application, and to assess the success of our marketing and advertising campaigns).
-
-2.2 We use the Personal Information that we collect generally to fulfill any bookings made through Vezeeta, to communicate with you, screen for potential risk or fraud; and when in line with the preferences you have shared with us, provide you with information or advertising relating to our products or services. </p>
-                </li>
-                <li>
-                    <h4 class="my-3">Your Rights</h4>
-                    <p class="text-muted"> 9.1 You have the right granted to obtain from us the confirmation as to whether or not personal data concerning you is being processed. You can contact us at any time to claim this right.
-</p>
-                    <p class="text-muted">9.2 You have the right to request the information that is currently being processed by us. You can also ask us for the purposes of the processing, the categories of personal data concerned; the recipients or categories of recipients to whom the personal data have been or will be disclosed, in particular recipients in third countries or international organizations; where possible, the envisaged period for which the personal data will be stored, or, if not possible, the criteria used to determine that period; the existence of the right to request from the controller rectification or erasure of personal data, or restriction of processing of personal data concerning the data subject, or to object to such processing; the existence of the right to lodge a complaint with a supervisory authority; where the personal data are not collected from the data subject, any available information as to their source.
-</p>
-                    <p class="text-muted">9.3 You have the right to let us know when your information changes, and the information we have on file is no longer accurate. Considering the purposes of the processing, you shall have the right to have incomplete personal data completed, including using providing a supplementary statement.
-</p>
-                    <p class="text-muted">9.4 You have the right to request the erasure of personal data without undue delay.
-</p>
-                    <p class="text-muted">9.5 You shall have the right to receive the personal data concerning you, which was provided to a controller, in a structured, commonly used and machine-readable format.</p>
-                    <p class="text-muted">9.6 You shall have the right to object at any time to processing of personal data concerning you. We shall no longer process the personal data in the event of the objection, unless we can demonstrate compelling legitimate grounds for the processing which override the interests, rights and freedoms of you, or for the establishment, exercise or defense of legal claims.</p>
-                    <p class="text-muted">9.7 You have the right to withdraw your consent to processing of your personal data at any time.</p>
-                </li>
-            </ul>
-
+            <h3 class="my-3 text-primary">Doctors Privacy Policy</h3>
+            <h4 class="my-3">Terms and Conditions</h4>
+            <p class="text-muted">Thank you for using Vezeeta's services. These Terms of Service (the 'TOS') are a legally binding agreement made by and between Vezeeta Limited Liability Company, (the 'Vezeeta' and/ or 'Service Provider'), and you, acting in your capacity as individual and, if applicable, on behalf of the entity, you are legally representing or for whom you are using this application (collectively, 'you', 'your', 'yours').</p>
+            <p class="text-muted">All reference to the T&C encompasses any terms, guidelines, and rules approved/provided by Vezeeta.</p>
+            <p class="text-muted">You understand that by using these services you acknowledge and agree that Vezeeta will treat your use of the Services as an acceptance of the Terms and to be fully bound thereby.</p>
+            <p class="text-muted">These TOS governs your access to and use of 'http://www.Vezeeta.com/' in addition to any other World Wide Website owned, operated, licensed, or controlled by Vezeeta (collectively, the 'Website') and the products, services or applications offered or developed by Vezeeta on the Website (collectively the 'Products/ Services/Applications').</p>
+            <p class="text-muted">Vezeeta reserves the right to update or change or amend these TOS at any time, and for any reason by posting the revised version on application in a way that amended T&C affect the existing Vezeeta's services effective immediately after being posted on the website. The continued access or use of this application and any services contained therein as of the effective date of any such modification shall be deemed by your continuous acceptance of these TOS, as modified.</p>
+            <p class="text-muted">https://www.vezeeta.com/en/Generic/DoctorsPrivacyPolicy (incorporated herein by reference) form legally binding contracts between you and Vezeeta. By using Vezeeta's Services, and to abide and comply with these TOS. If you do not agree to be bound by the TOS and to follow all applicable laws, guidelines and policies, do not access or use the application or any of Vezeeta's services.</p>
+            <p class="text-muted">Vezeeta may also offer other services that are governed by different Terms of Service. Such terms will be set and added accordingly.</p>
+            <p class="text-muted">Vezeeta will retain ownership of its intellectual property rights and you may not obtain any rights therein, except as expressly set forth in a written approval. You will have no right to use, copy, display, perform, create derivative works from, distribute, have distributed, transmit or sublicense from materials or content available on the application, than as may be reasonably necessary to use the Services for their intended purpose and except as expressly set forth in these TOS. You may not attempt to reverse engineer any of the technology used to provide the Services. If you become aware of any conduct that violates these TOS, Vezeeta encourages you to contact us. Vezeeta provides Services accessible on different equipment and devices including but not limited to certain mobile devices, and computers etc., which you are providing for this purpose. Vezeeta is not liable to provide the required devices or the telecommunication facilities i.e., internet connection or mobile service.</p>
+            <h4 class="my-3">User Registration and Passwords</h4>
+            <p class="text-muted">You do not have to register in order to visit the application. However, in order to access certain features of the services, you will need to register with Vezeeta and create an account through the online registration process on the website. Your account gives you access to the Services and functionality that we may establish and maintain from time to time and in our sole discretion. In creating an account, you must provide Vezeeta with accurate and complete registration information, as prompted in the registration form. You must promptly notify Vezeeta if any of this information changes. If you fail to provide or update this information, Vezeeta may terminate your right to use the application or the Services.</p>
+            <p class="text-muted">In case this is your first approach to Vezeeta, upon the registration is completed, you are kindly requested to contact Vezeeta for opening an account for your practice.</p>
+            <p class="text-muted">When you open your account, you will be asked to choose a password. You must keep your password confidential and under no circumstances should you respond to a request for your password, particularly a request from an individual claiming to be an employee of Vezeeta. Vezeeta's employees will never ask for your password. You must notify Vezeeta if you receive such a request.</p>
+            <p class="text-muted">You will be responsible for all use of your password and account, including, without limitation, any use by any unauthorized third party. You must notify Vezeeta immediately if you believe your password or account has been obtained or may be accessed or used by any unauthorized person or entity. In addition, you must notify Vezeeta immediately if you become aware of any other breach or attempted breach of the security of the application.</p>
+            <p class="text-muted">You are responsible for any activity using your account, whether or not you authorized that activity. You acknowledge that if you wish to protect your transmission of data or files to Vezeeta, it is your responsibility to use a secured encrypted connection to communicate with the Services. Three consecutive logon failures will result in suspension of your login information requiring you to contact the Vezeeta via email to revalidate your account.</p>
             <p class="text-muted">Thanks</p>
         </div>
     </div>
@@ -157,7 +131,7 @@
                     <div class="col-md-4 col-sm-6 my-3">
                         <div class="img">
                             <a class="text-light text-decoration-none" href="#">
-            <img src="images/favicon.ico" width="30" height="30" class="d-inline-block align-top" alt=""><span class="logo-text h4"> ATOM</span></a>
+            <img src="../images/favicon.ico" width="30" height="30" class="d-inline-block align-top" alt=""><span class="logo-text h4"> ATOM</span></a>
                             <ul class="list-unstyled ml-2 mt-3">
                                 <li class="my-1"><a href="#" class="text-light">about us</a></li>
                                 <li class="my-1"><a href="#" class="text-light">our team</a></li>
@@ -214,11 +188,11 @@
         </div>
     </footer>
 
-      <script src="js/jquery-3.5.1.min.js"></script>
-      <script src="js/bootstrap.bundle.min.js"></script>
-      <script src="js/bs-custom-file-input.min.js"></script>
-      <script src="js/jquery.nice-select.min.js"></script>
-      <script src="js/owl.carousel.min.js" async></script>
-      <script src="js/scripts.js" async></script>
+      <script src="../js/jquery-3.5.1.min.js"></script>
+      <script src="../js/bootstrap.bundle.min.js"></script>
+      <script src="../js/bs-custom-file-input.min.js"></script>
+      <script src="../js/jquery.nice-select.min.js"></script>
+      <script src="../js/owl.carousel.min.js" async></script>
+      <script src="../js/scripts.js" async></script>
     </body>
 </html>
