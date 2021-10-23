@@ -25,15 +25,6 @@ document.addEventListener('click', event => {
     }
 });
 
-function setWindowHeight() {
-    'use strict';
-    const window_height = window.innerHeight,
-        nav_height = document.querySelector('nav').clientHeight;
-    document.getElementById('js-header').style.height = `${window_height - nav_height}px`;
-}
-
-window.addEventListener('resize', setWindowHeight, false);
-setWindowHeight();
 
 // Header carousel
 // Const header = document.querySelector('header');
@@ -49,10 +40,16 @@ setWindowHeight();
 //     }, 1100);
 // }, 5000);
 
-document.querySelector('.angle-down a').onclick = function () {
-    'use strict';
-    document.querySelector('.offers').scrollIntoView({ behavior: 'smooth' });
-};
+const header_angle_down = document.querySelector('.angle-down a');
+if (header_angle_down) {
+    header_angle_down.onclick = function () {
+        'use strict';
+        document.querySelector('.offers').scrollIntoView({
+            behavior: 'smooth',
+        });
+    };
+}
+
 
 // // Rotate filter svg on click
 // Document.querySelector('.doctors .accordion ul li').on('click', function () {
@@ -76,25 +73,16 @@ current_year.textContent = new Date().getFullYear().toString();
 //     }
 // };
 
-NiceSelect.bind(document.getElementById('js-city-select'));
-NiceSelect.bind(document.getElementById('js-specialist-select'));
-NiceSelect.bind(document.getElementById('js-area-select'));
+const city_select = document.getElementById('js-city-select')
+    , specialist_select = document.getElementById('js-specialist-select')
+    , area_select = document.getElementById('js-area-select');
 
-
-const options = {
-    type: 'carousel',
-    perView: 4,
-    autoplay: 5000,
-    breakpoints: {
-        992: {
-            perView: 3,
-        },
-        768: {
-            perView: 2,
-        },
-        567: {
-            perView: 1,
-        },
-    },
-}, offers = new Glide('#offers', options).mount()
-    , specialiies = new Glide('#specialiies', options).mount();
+if (city_select) {
+    NiceSelect.bind(document.getElementById('js-city-select'));
+}
+if (specialist_select) {
+    NiceSelect.bind(specialist_select);
+}
+if (area_select) {
+    NiceSelect.bind(area_select);
+}

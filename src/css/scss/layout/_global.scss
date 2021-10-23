@@ -69,6 +69,14 @@ body {
   color: #fff;
 }
 
+.text-aurora{
+  color: $main-bg;
+}
+
+.bg-aurora{
+  background-color: $main-bg;
+}
+
 %skew {
   content: "";
   background-color: $main-color;

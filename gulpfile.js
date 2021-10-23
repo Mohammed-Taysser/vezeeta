@@ -127,7 +127,12 @@ function build_libs_js_task() {
     'use strict';
     return gulp.src(paths.javascript.libs)
         .pipe(sourcemaps.init())
-        .pipe(concat('libs.min.js'))
+        // .pipe(concat('libs.min.js'))
+        .pipe(rename(function (path) {
+            if (path.basename.slice(-3) !== 'min') {
+                path.extname = '.min.js';
+            }
+        }))
         .pipe(uglify())
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(paths.javascript.build.dest));
