@@ -47,9 +47,98 @@ body{
 .rotate--90{
     transform: rotate(-90deg);
 }
-/*---------------- navbar ------------*/
-nav.navbar .navbar-brand .logo-text{
-    letter-spacing: -3px;
+
+/* navbar */
+
+nav .brand{
+    font-size: 1.5rem;
+}
+
+nav .close-button{
+    user-select: none;
+    cursor: pointer;
+    display: none;
+}
+
+nav .close-button > span{
+    height: 3px;
+    width: 30px;
+    display: block;
+    margin-bottom: 5px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    background-color: #9400ff;
+}
+
+nav .close-button span:last-child{
+    margin: 0;
+}
+
+nav .close-button > span:first-of-type.transform {
+    transform: rotate(-45deg) translate(-10px, 10px);
+    -webkit-transform: rotate(-45deg) translate(-10px, 10px);
+    -moz-transform: rotate(-45deg) translate(-10px, 10px);
+    -ms-transform: rotate(-45deg) translate(-10px, 10px);
+    -o-transform: rotate(-45deg) translate(-10px, 10px);
+}
+nav .close-button > span:nth-of-type(2).transform {
+    opacity: 0;
+}
+nav .close-button > span:last-of-type.transform {
+    transform: rotate(45deg) translate(-2px, -2px);
+    -webkit-transform: rotate(45deg) translate(-2px, -2px);
+    -moz-transform: rotate(45deg) translate(-2px, -2px);
+    -ms-transform: rotate(45deg) translate(-2px, -2px);
+    -o-transform: rotate(45deg) translate(-2px, -2px);
+}
+
+nav .main-links ul {
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+    align-items: center;
+}
+
+nav .main-links .custom-nav-link a{
+    color: #333;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+nav .main-links .custom-nav-link.active a, nav .main-links .custom-nav-link:hover a{
+    color: #9400ff;
+}
+
+@media (max-width: 768px) {
+    nav .close-button{
+        display: block;
+    }
+    
+    nav .main-links ul {
+        display: block;
+        position: absolute;
+        width: 20em;
+        left: -20em;
+        background-image: linear-gradient(to top right, #f5f5ff 30%, #f5f5ff 100%, #ffffff 70%);
+        top: 0;
+        height: 100vh;
+        padding-top: 50px;
+        padding-left: 20px;
+        transition: all 0.3s ease-in-out;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+    }
+    nav .main-links ul.open{
+        left: 0;
+    }
 }
 
 /* ------------- header ------------ */

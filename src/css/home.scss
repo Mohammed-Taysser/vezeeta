@@ -1,8 +1,20 @@
 
-/* Configuration */
-@import "scss/helpers/variables";
-@import "scss/helpers/mixins";
+/* @import "scss/helpers/variables";*/
+/* @import "scss/helpers/mixins";*/
 
-/* style */
+@import 'scss/layout/global';
+@import 'scss/layout/hero-header';
+@import 'scss/layout/footer';
+
+@import 'scss/components/spectre-framework/position';
+@import 'scss/components/spectre-framework/display';
+@import 'scss/components/spectre-framework/navbar';
+
+
+@import 'scss/components/text_hover_effects/both-side';
+
+@import 'scss/libs/bootstrap';
+@import 'scss/libs/nice-select';
+@import 'scss/libs/glide.core.min';
 
 @import 'scss/pages/homepage';

@@ -1,0 +1,25 @@
+extends ../layouts/layout
+
+block title 
+	title Home
+
+block style 
+	link(rel="stylesheet", href="../css/home.min.css")
+
+block javascript 
+	script(src="../javascript/build/libs.min.js") 
+	script(src="../javascript/build/scripts.min.js") 
+
+block content 
+
+	include ../components/home/header
+
+	include ../components/home/specialiies
+
+	include ../components/home/offers
+
+	include ../components/home/more-about
+
+	include ../components/home/download-app
+	
+	include ../components/home/search-suggest

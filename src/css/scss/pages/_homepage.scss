@@ -1,3 +1,7 @@
 
-.hio{
-font-size:20px}
+.download-app{
+    background-color: $main-color;
+    &.skew-divider:before,&.skew-divider::after{
+        background-color: $main-color;
+      }
+}
