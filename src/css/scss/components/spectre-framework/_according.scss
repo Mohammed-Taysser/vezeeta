@@ -13,14 +13,15 @@
   </div>
 </div>
 */
-.accordion{
-   input:checked ~ .accordion-header > .icon:first-child, &[open] .accordion-header > .icon:first-child {
-     transform: rotate(90deg);
-   }
+.accordion {
+  input:checked ~ .accordion-header > .icon,
+  &[open] .accordion-header > .icon {
+    transform: rotate(90deg);
+  }
   input:checked ~ .accordion-body,
-   &[open] .accordion-body {
-     max-height: 50rem;
-   }
+  &[open] .accordion-body {
+    max-height: 50rem;
+  }
 
   .accordion-header {
     display: block;

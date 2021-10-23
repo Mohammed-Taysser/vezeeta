@@ -75,7 +75,8 @@ current_year.textContent = new Date().getFullYear().toString();
 
 const city_select = document.getElementById('js-city-select')
     , specialist_select = document.getElementById('js-specialist-select')
-    , area_select = document.getElementById('js-area-select');
+    , area_select = document.getElementById('js-area-select'),
+    order_result = document.getElementById('select-result-order');
 
 if (city_select) {
     NiceSelect.bind(document.getElementById('js-city-select'));
@@ -85,4 +86,7 @@ if (specialist_select) {
 }
 if (area_select) {
     NiceSelect.bind(area_select);
+}
+if(order_result){
+    NiceSelect.bind(order_result);
 }

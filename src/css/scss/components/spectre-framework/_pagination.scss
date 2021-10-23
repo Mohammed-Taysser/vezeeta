@@ -60,11 +60,12 @@ prev - next post
       display: inline-block;
       padding: 0.2rem 0.4rem;
       text-decoration: none;
+      color: rgb(163, 163, 163);
     }
 
     a:focus,
     a:hover {
-      color: #5755d9;
+      color: #001d38;
     }
 
     &.disabled a {
@@ -74,8 +75,9 @@ prev - next post
     }
 
     &.active a {
-      background: #5755d9;
+      background: #001d38;
       color: #fff;
+      border-radius: 3px;
     }
 
     &.page-prev,
