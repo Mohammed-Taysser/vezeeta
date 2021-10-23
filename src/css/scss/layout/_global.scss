@@ -69,11 +69,11 @@ body {
   color: #fff;
 }
 
-.text-aurora{
+.text-aurora {
   color: $main-bg;
 }
 
-.bg-aurora{
+.bg-aurora {
   background-color: $main-bg;
 }
 
@@ -125,6 +125,25 @@ body {
 
   &::before {
     @extend %skew;
+    transform-origin: bottom right;
+  }
+}
+
+.skew-divider-img {
+  position: relative;
+
+  &::after {
+    background-image: url("../images/background.png");
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: skewY(-6deg);
     transform-origin: bottom right;
   }
 }
