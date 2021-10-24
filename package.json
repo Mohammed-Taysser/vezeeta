@@ -48,5 +48,8 @@
       "browser": true,
       "node": true
     }
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.2"
   }
 }

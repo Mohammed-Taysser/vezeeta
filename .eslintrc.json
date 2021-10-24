@@ -21,7 +21,7 @@
         "complexity": [
             "error",
             {
-                "max": 2
+                "max": 5
             }
         ],
         "consistent-return": [
@@ -281,7 +281,7 @@
           "comma-dangle": ["error", "always-multiline"],
           "array-element-newline": ["error",  { "multiline": true , "minItems": 3 }],
           "arrow-parens": ["error", "as-needed"],
-          "arrow-spacing": ["error", { "before": false, "after": true }],
+          "arrow-spacing": ["error", { "before": true, "after": true }],
           "array-bracket-newline": ["error", { "multiline": true, "minItems": 2 }],
           "array-bracket-spacing": ["error", "always", { "singleValue": false , "objectsInArrays": false, "arraysInArrays": false  }],
           "wrap-regex": "error",

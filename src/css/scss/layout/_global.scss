@@ -15,7 +15,7 @@ $main-color: #f5f7fa;
   font-family: Tajawal, sans-serif;
 }
 body {
-  font-family: Montserrat, sans-serif;
+  font-family: Montserrat, sans-serif !important;
   text-transform: capitalize;
 }
 ::selection {

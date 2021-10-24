@@ -2,12 +2,12 @@ include ../helpers/variables
 
 doctype html
 html(lang="en")
-    include ../includes/head
+    include head
     body 
         include ../components/navbar
         block content 
         include ../components/footer
 
+    block javascript
     script(src="../javascript/build/nice-select.min.js") 
     script(src="../javascript/build/scripts.min.js") 
-    block javascript
