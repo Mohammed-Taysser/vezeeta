@@ -56,16 +56,16 @@ function scss_task() {
         .pipe(gulp.dest(paths.scss.dest));
 }
 
-// function demo_scss_task() {
-//     'use strict';
-//     return gulp.src(paths.scss.src)
-//         .pipe(sourcemaps.init())
-//         .pipe(autoprefixer())
-//         .pipe(sass().on('error', sass.logError))
-//         .pipe(rename(function (path) {path.extname = '.css';}))
-//         .pipe(sourcemaps.write('.'))
-//         .pipe(gulp.dest(paths.scss.dest));
-// }
+function demo_scss_task() {
+    'use strict';
+    return gulp.src(paths.scss.src)
+        .pipe(sourcemaps.init())
+        .pipe(autoprefixer())
+        .pipe(sass().on('error', sass.logError))
+        .pipe(rename(function (path) {path.extname = '.css';}))
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest(paths.scss.dest));
+}
 
 function html_task() {
     'use strict';
@@ -81,30 +81,21 @@ function fonts_task() {
         .pipe(gulp.dest(paths.fonts.dest));
 }
 
-// function demo_js_task() {
-//     'use strict';
-//     return gulp.src(paths.javascript.demo.src)
-//         .pipe(sourcemaps.init())
-//         .pipe(babel({ presets: ['@babel/env'] }))
+function demo_js_task() {
+    'use strict';
+    return gulp.src(paths.javascript.demo.src)
+        .pipe(sourcemaps.init())
+        .pipe(babel({ presets: ['@babel/env'] }))
 
-//         // .pipe(concat('script.js'))
-//         .pipe(rename(function (path) {
-//             if (path.basename.slice(-3) === 'min'){
-//                 path.basename = path.basename.slice(0, -4);
-//             }
-//         }))
-//         .pipe(sourcemaps.write('.'))
-//         .pipe(gulp.dest(paths.javascript.demo.dest));
-// }
-// function demo_libs_js_task() {
-//     'use strict';
-//     return gulp.src(paths.javascript.libs)
-//         .pipe(sourcemaps.init())
-//         .pipe(babel({ presets: ['@babel/env'] }))
-//         .pipe(concat('libs.js'))
-//         .pipe(sourcemaps.write('.'))
-//         .pipe(gulp.dest(paths.javascript.demo.dest));
-// }
+        // .pipe(concat('script.js'))
+        .pipe(rename(function (path) {
+            if (path.basename.slice(-3) === 'min'){
+                path.basename = path.basename.slice(0, -4);
+            }
+        }))
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest(paths.javascript.demo.dest));
+}
 function build_js_task() {
     'use strict';
     return gulp.src(paths.javascript.build.src)
@@ -127,7 +118,6 @@ function build_libs_js_task() {
     'use strict';
     return gulp.src(paths.javascript.libs)
         .pipe(sourcemaps.init())
-        // .pipe(concat('libs.min.js'))
         .pipe(rename(function (path) {
             if (path.basename.slice(-3) !== 'min') {
                 path.extname = '.min.js';
@@ -147,13 +137,12 @@ function images_task() {
 function watch_fun() {
     'use strict';
     gulp.watch('src/html/**/*.pug', html_task);
-    // gulp.watch(paths.javascript.demo.src, demo_js_task);
-    // gulp.watch(paths.javascript.libs, demo_libs_js_task);
+    gulp.watch(paths.javascript.demo.src, demo_js_task);
     gulp.watch('src/js/**/*.js', build_js_task);
     gulp.watch('src/js/**/*.js', build_libs_js_task);
     gulp.watch(paths.fonts.src, fonts_task);
     gulp.watch('src/css/**/*.scss', scss_task);
-    // gulp.watch(paths.scss.demo.src, demo_scss_task);
+    gulp.watch(paths.scss.src, demo_scss_task);
     gulp.watch(paths.images.src, images_task);
 }
 
@@ -162,11 +151,10 @@ exports.default = gulp.series(clean,
     html_task,
     build_js_task,
     build_libs_js_task,
-    // demo_js_task,
-    // demo_libs_js_task,
+    demo_js_task,
     fonts_task,
     images_task,
     scss_task,
-    // demo_scss_task,
+    demo_scss_task,
     gulp.parallel(watch_fun),
 );
