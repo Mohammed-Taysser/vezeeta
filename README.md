@@ -15,6 +15,7 @@ No jQuery needed :smile:
 - [`glide.js`](https://glidejs.com/) Javascript Es6 Slider And Carouse
 - [`ESlint`](eslint.org/) Find and fix problems in JavaScript code
 - [`pug.js`](https://pugjs.org/api/getting-started.html)  high-performance template engine
+- [`nice-select2`](https://bluzky.github.io/nice-select2/) Customizable Dropdowns.
 
 ## Steps for developing
 
