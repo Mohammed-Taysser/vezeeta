@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="vezeeta template inspire from vezeeta.com">
+    <meta name="keywords" content="HTML, CSS, JavaScript, bootstrap, vezeeta, gulp, scss, sass, pug, doctor">
+    <meta name="author" content="Mohammed Taysser">
+    <link rel="stylesheet" href="../css/core.min.css">
+    <link rel="stylesheet" href="../css/doctor-details.min.css">
+    <link rel="icon" href="../images/favicon.png" type="image/png">
+    <title>Doctor-Details</title>
+  </head>
+  <body> 
+    <nav class="py-3 position-relative">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center"><a class="brand text-light text-decoration-none" href="index.html">Vezeeta</a>
+          <div class="menu-toggle d-md-none" id="js-menu-toggle">
+            <div class="hamburger"><span></span><span></span><span></span></div>
+            <div class="cross"><span></span><span></span></div>
+          </div>
+          <div class="main-links" id="main-links">
+            <ul class="list-unstyled m-0">
+              <li class="custom-nav-link active"><a class="text-light text-hover text-hover-both-opening-horizontal nav-link" href="sign-up.html">sign up</a></li>
+              <li class="custom-nav-link"><a class="text-light text-hover text-hover-both-opening-horizontal nav-link" href="login.html">doctors</a></li>
+              <li class="custom-nav-link"><a class="text-light text-hover text-hover-both-opening-horizontal nav-link" href="about-us.html">about</a></li>
+              <li class="custom-nav-link"><a class="text-light text-hover text-hover-both-opening-horizontal nav-link" href="contact-us.html">contact us</a></li>
+              <li class="custom-nav-link"><a class="text-light text-hover text-hover-both-opening-horizontal nav-link tajawal" href="#">عربي</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="header py-5 skew-divider-img">
+      <div class="container py-5">
+        <h2 class="my-3 font-weight-bold">Better Healthcare for a Better Life</h2>
+        <h3 class="my-3 text-decoration-none">Book online or call <span class="text-danger mx-1">
+            <svg class="bi bi-telephone-fill" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewbox="0 0 16 16">
+              <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"></path>
+            </svg></span><a class="text-dark" href="tel:16676">16676</a></h3>
+        <form class="mt-5" action="search.html" method="get">
+          <div class="row justify-content-center">
+            <div class="col-md-6 my-3 col-lg-4">
+              <div class="input-search">
+                <label class="sr-only" for="doctor-name-search">Doctor Name</label>
+                <input class="form-control form-control-lg" id="doctor-name-search" type="text" placeholder="Doctor Name" name="doctor_name" style="border-color: #e8e8e8">
+              </div>
+            </div>
+            <div class="col-md-6 my-3 col-lg-4">
+              <div class="select-city">
+                <label class="d-none" for="select-specialist"></label>
+                <select class="wide js-select" id="js-specialist-select" name="specialist">
+                  <option value="3" disabled="" selected="">specialist select</option>
+                  <option value="1">Some option</option>
+                  <option value="2">Another option</option>
+                  <option value="4">more option</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6 my-3 col-lg-4">
+              <div class="select-city">
+                <label class="d-none" for="select-city"></label>
+                <select class="wide" id="js-city-select" name="city_select">
+                  <option value="3" disabled="" selected="">City Select</option>
+                  <option value="1">Some option</option>
+                  <option value="2">Another option</option>
+                  <option value="4">more option</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6 my-3 col-lg-4">
+              <div class="select-area">
+                <label class="d-none" for="select-area"></label>
+                <select class="wide js-select" id="js-area-select" name="area_select">
+                  <option value="3" disabled="" selected="">Area Select</option>
+                  <option value="1">Some option</option>
+                  <option value="2">Another option</option>
+                  <option value="4">more option</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6 my-3 col-lg-4">
+              <div class="send-button">
+                <button class="btn transition btn-aurora btn-lg btn-block" type="submit">
+                  <svg class="bi bi-search position-relative mr-1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" style="top: -3px;" viewbox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+                  </svg> Search
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="doctor-detail skew-divider" style="background-color: #f5f7fa">
+      <div class="container my-5 py-3 text-muted">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 my-3">
+            <div class="main-info bg-white p-3 rounded nice-shadow">
+              <div class="media pt-2"><img class="mr-2" src="../images/avatar/avatar-3.png" style="width: 150px;" alt="doctor-avatar">
+                <div class="media-body">
+                  <h5 class="mb-2 d-flex justify-content-between"><a class="text-primary text-decoration-none" href="#">doctor stone</a><small>466 views</small></h5>
+                  <p class="mb-1">
+                     Consultant&Professor of surgical oncology at NCI, Cairo Uni. fellowship of GIT&Minimally invasive surgery - Bordeaux Uni-France</p>
+                  <p class="mb-2"><span class="text-warning stars mr-3">
+                      <svg class="bi bi-star-fill" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewbox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                      </svg>
+                      <svg class="bi bi-star-fill" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewbox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                      </svg>
+                      <svg class="bi bi-star-half" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewbox="0 0 16 16">
+                        <path d="M5.354 5.119 7.538.792A.516.516 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.537.537 0 0 1 16 6.32a.548.548 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.52.52 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.58.58 0 0 1 .085-.302.513.513 0 0 1 .37-.245l4.898-.696zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.565.565 0 0 1 .162-.505l2.907-2.77-4.052-.576a.525.525 0 0 1-.393-.288L8.001 2.223 8 2.226v9.8z"></path>
+                      </svg>
+                      <svg class="bi bi-star" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewbox="0 0 16 16">
+                        <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"></path>
+                      </svg></span><span class="visitor-number position-relative" style="top: 3px;">653 visitor</span></p>
+                  <p class="mb-2 small"><a class="text-primary text-decoration-none" href="#">Surgical Oncologist</a>specialize in <a class="text-decoration-none text-primary" href="#">Gynaecologic </a><a class="text-decoration-none text-primary" href="#">Oncological </a><a class="text-decoration-none text-primary" href="#">Surgery </a><a class="text-decoration-none text-primary" href="#">Adult Oncology </a><a class="text-decoration-none text-primary" href="#">Liver </a><a class="text-decoration-none text-primary" href="#">Tumor </a>and <a class="text-decoration-none text-primary" href="#">Stomach Tumor</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="bg-white my-3 p-4 rounded nice-shadow">
+              <h4 class="font-weight-bold mb-2">
+                <svg class="bi bi-info-circle mb-1 mr-2 text-primary" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" viewbox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+                  <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path>
+                </svg> about the doctor
+              </h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi dolores ea eius
+                enim et ex expedita illum ipsam nemo officiis possimus quis, recusandae tempore veniam.
+                Accusantium aliquid consequuntur dolorem fugit, iste natus obcaecati quam quo repellat
+                similique sit veniam. Beatae dignissimos ea modi molestiae tempore. Enim eum in incidunt.
+              </p>
+            </div>
+            <div class="bg-white my-3 p-4 rounded nice-shadow">
+              <h4 class="font-weight-bold mb-2">
+                <svg class="bi bi-images mr-2 mb-1 text-primary" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" viewbox="0 0 16 16">
+                  <path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path>
+                  <path d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z"></path>
+                </svg> clinic photos
+              </h4>
+              <div class="glide mt-5" id="js-doctor-services">
+                <div class="glide__track" data-glide-el="track">
+                  <ul class="glide__slides">
+                    <li class="glide__slide">
+                      <div class="bg-white nice-shadow rounded">
+                        <div class="img rounded-top overflow-hidden" style="height:170px;"><img class="img-fluid" src="../images/500-500/pexels-alex-green-5699522.jpg" alt=""></div>
+                      </div>
+                    </li>
+                    <li class="glide__slide">
+                      <div class="bg-white nice-shadow rounded">
+                        <div class="img rounded-top overflow-hidden" style="height:170px;"><img class="img-fluid" src="../images/500-500/pexels-karolina-grabowska-4219614.jpg" alt=""></div>
+                      </div>
+                    </li>
+                    <li class="glide__slide">
+                      <div class="bg-white nice-shadow rounded">
+                        <div class="img rounded-top overflow-hidden" style="height:170px;"><img class="img-fluid" src="../images/500-500/pexels-markus-spiske-364495.jpg" alt=""></div>
+                      </div>
+                    </li>
+                    <li class="glide__slide">
+                      <div class="bg-white nice-shadow rounded">
+                        <div class="img rounded-top overflow-hidden" style="height:170px;"><img class="img-fluid" src="../images/500-500/pexels-charlotte-may-5824907.jpg" alt=""></div>
+                      </div>
+                    </li>
+                    <li class="glide__slide">
+                      <div class="bg-white nice-shadow rounded">
+                        <div class="img rounded-top overflow-hidden" style="height:170px;"><img class="img-fluid" src="../images/500-500/pexels-skitterphoto-823.jpg" alt=""></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="glide__arrows" data-glide-el="controls">
+                  <button class="glide__arrow glide__arrow--left" data-glide-dir="&lt;">
+                    <svg class="bi bi-chevron-left" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"></path>
+                    </svg>
+                  </button>
+                  <button class="glide__arrow glide__arrow--right" data-glide-dir="&gt;"> 
+                    <svg class="bi bi-chevron-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="bg-white my-3 p-4 rounded nice-shadow">
+              <h4 class="font-weight-bold mb-4">
+                <svg class="bi bi-bag-plus mr-2 mb-1 text-primary" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" viewbox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z"></path>
+                  <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"></path>
+                </svg> Doctor&rsquo;s Services
+              </h4>
+              <div class="suggest"><a class="btn btn-sm btn-link bg-light m-1" href="#" role="button">Dermatologist</a><a class="btn btn-sm btn-link bg-light m-1" href="#" role="button">Dentist</a><a class="btn btn-sm btn-link bg-light m-1" href="#" role="button">Neurologist</a><a class="btn btn-sm btn-link bg-light m-1" href="#" role="button">Orthopedist</a><a class="btn btn-sm btn-link bg-light m-1" href="#" role="button">Gynecologist</a><a class="btn btn-sm btn-link bg-light m-1" href="#" role="button">ENT Doctor</a><a class="btn btn-sm btn-link bg-light m-1" href="#" role="button">view more ...</a></div>
+            </div>
+            <div class="bg-white my-3 p-4 rounded nice-shadow">
+              <h4 class="font-weight-bold mb-4">
+                <svg class="bi bi-chat-square-dots mr-2 mb-1 text-primary" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" viewbox="0 0 16 16">
+                  <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"></path>
+                  <path d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path>
+                </svg> patient reviews
+              </h4>
+              <hr class="my-3">
+              <ul class="list-unstyled">
+                <li class="media my-2 p-3 rounded nice-shadow"><img class="mr-2" src="../images/avatar/avatar-1.png" style="width: 70px;" alt="user-avatar">
+                  <div class="media-body">
+                    <h6 class="d-flex justify-content-between mb-1"><a class="text-primary text-decoration-none" href="#">dr strange</a><small class="data">13-5-2050</small></h6>
+                    <p class="mb-2"><span class="text-warning stars mr-3 small">
+                        <svg class="bi bi-star-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewbox="0 0 16 16">
+                          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                        </svg>
+                        <svg class="bi bi-star-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewbox="0 0 16 16">
+                          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                        </svg>
+                        <svg class="bi bi-star-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewbox="0 0 16 16">
+                          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                        </svg>
+                        <svg class="bi bi-star-half" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewbox="0 0 16 16">
+                          <path d="M5.354 5.119 7.538.792A.516.516 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.537.537 0 0 1 16 6.32a.548.548 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.52.52 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.58.58 0 0 1 .085-.302.513.513 0 0 1 .37-.245l4.898-.696zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.565.565 0 0 1 .162-.505l2.907-2.77-4.052-.576a.525.525 0 0 1-.393-.288L8.001 2.223 8 2.226v9.8z"></path>
+                        </svg></span></p>
+                    <p class="mb-1 small">best dr ever ^_^</p>
+                  </div>
+                </li>
+                <li class="media my-2 p-3 rounded nice-shadow"><img class="mr-2" src="../images/avatar/avatar-5.png" style="width: 70px;" alt="user-avatar">
+                  <div class="media-body">
+                    <h6 class="d-flex justify-content-between mb-1"><a class="text-primary text-decoration-none" href="#">main with space</a><small class="data">13-08-2050</small></h6>
+                    <p class="mb-2"><span class="text-warning stars mr-3 small">
+                        <svg class="bi bi-star-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewbox="0 0 16 16">
+                          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                        </svg>
+                        <svg class="bi bi-star-half" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewbox="0 0 16 16">
+                          <path d="M5.354 5.119 7.538.792A.516.516 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.537.537 0 0 1 16 6.32a.548.548 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.52.52 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.58.58 0 0 1 .085-.302.513.513 0 0 1 .37-.245l4.898-.696zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.565.565 0 0 1 .162-.505l2.907-2.77-4.052-.576a.525.525 0 0 1-.393-.288L8.001 2.223 8 2.226v9.8z"></path>
+                        </svg>
+                        <svg class="bi bi-star" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewbox="0 0 16 16">
+                          <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"></path>
+                        </svg>
+                        <svg class="bi bi-star" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewbox="0 0 16 16">
+                          <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"></path>
+                        </svg></span></p>
+                    <p class="mb-1 small">coming from future :P</p>
+                  </div>
+                </li>
+                <li class="media my-2 p-3 rounded nice-shadow"><img class="mr-2" src="../images/avatar/avatar-4.png" style="width: 70px;" alt="user-avatar">
+                  <div class="media-body">
+                    <h6 class="d-flex justify-content-between mb-1"><a class="text-primary text-decoration-none" href="#">main with space</a><small class="data">11-01-2021</small></h6>
+                    <p class="mb-2"><span class="text-warning stars mr-3 small">
+                        <svg class="bi bi-star-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewbox="0 0 16 16">
+                          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                        </svg>
+                        <svg class="bi bi-star-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewbox="0 0 16 16">
+                          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                        </svg>
+                        <svg class="bi bi-star-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewbox="0 0 16 16">
+                          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                        </svg>
+                        <svg class="bi bi-star-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewbox="0 0 16 16">
+                          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                        </svg>
+                        <svg class="bi bi-star-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewbox="0 0 16 16">
+                          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                        </svg></span></p>
+                    <p class="mb-1 small">i recommended it for any one. thanks doctor</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 my-3">
+            <div>
+              <h5 class="text-center mb-3 bg-aurora text-white p-3 rounded">Booking Information</h5>
+              <div class="summarized rounded bg-white nice-shadow border p-3">
+                <p class="mb-2 text-center">
+                  <svg class="bi bi-cash-stack text-aurora d-block my-3 mx-auto" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewbox="0 0 16 16">
+                    <path d="M1 3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1H1zm7 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
+                    <path d="M0 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V5zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V7a2 2 0 0 1-2-2H3z"></path>
+                  </svg> fees 210 EGP
+                </p>
+                <hr class="my-3">
+                <p class="mb-2 text-center">
+                  <svg class="mx-auto text-aurora d-block my-3 bi bi-alarm" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8.5 5.5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9V5.5z"></path>
+                    <path d="M6.5 0a.5.5 0 0 0 0 1H7v1.07a7.001 7.001 0 0 0-3.273 12.474l-.602.602a.5.5 0 0 0 .707.708l.746-.746A6.97 6.97 0 0 0 8 16a6.97 6.97 0 0 0 3.422-.892l.746.746a.5.5 0 0 0 .707-.708l-.601-.602A7.001 7.001 0 0 0 9 2.07V1h.5a.5.5 0 0 0 0-1h-3zm1.038 3.018a6.093 6.093 0 0 1 .924 0 6 6 0 1 1-.924 0zM0 3.5c0 .753.333 1.429.86 1.887A8.035 8.035 0 0 1 4.387 1.86 2.5 2.5 0 0 0 0 3.5zM13.5 1c-.753 0-1.429.333-1.887.86a8.035 8.035 0 0 1 3.527 3.527A2.5 2.5 0 0 0 13.5 1z"></path>
+                  </svg>waiting time 50 minutes
+                </p>
+                <hr class="my-3">
+                <p class="mb-2 text-center">
+                  <svg class="bi bi-geo-alt mx-auto d-block my-3 text-aurora" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewbox="0 0 16 16">
+                    <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"></path>
+                    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"></path>
+                  </svg>egypt - cairo - nser cty
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="py-5 skew-divider-top text-white">
+      <div class="container">
+        <div class="more-link">
+          <div class="row justify-content-center">
+            <div class="col-md-4 col-sm-6 my-3">
+              <div class="img"><a class="text-light text-decoration-none" href="index.html"><img class="d-inline-block align-top" src="../images/favicon.png" width="30" height="30" alt=""><span class="logo-text h4"> VEZEETS</span></a>
+                <ul class="list-unstyled ml-2 mt-3">
+                  <li class="my-1"><a class="text-light text-hover text-hover-left-goes-down-right-goes-up" href="about-us.html">about us</a></li>
+                  <li class="my-1"><a class="text-light text-hover text-hover-left-goes-down-right-goes-up" href="our-team.html">our team</a></li>
+                  <li class="my-1"><a class="text-light text-hover text-hover-left-goes-down-right-goes-up" href="news.html">news</a></li>
+                  <li class="my-1"><a class="text-light text-hover text-hover-left-goes-down-right-goes-up" href="#">vezeeta doctors</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 my-3">
+              <h3 class="mb-3">search by</h3>
+              <ul class="list-unstyled ml-2 mt-3">
+                <li class="my-1"><a class="text-light text-hover text-hover-left-goes-down-right-goes-up" href="search.html">Specialty</a></li>
+                <li class="my-1"><a class="text-light text-hover text-hover-left-goes-down-right-goes-up" href="search.html">Insurance</a></li>
+                <li class="my-1"><a class="text-light text-hover text-hover-left-goes-down-right-goes-up" href="search.html">area</a></li>
+                <li class="my-1"><a class="text-light text-hover text-hover-left-goes-down-right-goes-up" href="search.html">city</a></li>
+                <li class="my-1"><a class="text-light text-hover text-hover-left-goes-down-right-goes-up" href="search.html">Hospital</a></li>
+                <li class="my-1"><a class="text-light text-hover text-hover-left-goes-down-right-goes-up" href="search.html">center</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4 col-sm-6 my-3">
+              <h3 class="mb-3">need help ?</h3>
+              <ul class="list-unstyled ml-2 mt-3">
+                <li class="my-1"><a class="text-light text-hover text-hover-left-goes-down-right-goes-up" href="contact-us.html">contact us</a></li>
+                <li class="my-1"><a class="text-light text-hover text-hover-left-goes-down-right-goes-up" href="terms-of-use.html">terms of use</a></li>
+                <li class="my-1"><a class="text-light text-hover text-hover-left-goes-down-right-goes-up" href="privacy-policy.html">privacy policy</a></li>
+                <li class="my-1"><a class="text-light text-hover text-hover-left-goes-down-right-goes-up" href="doctors-privacy-policy.html">doctor privacy policy</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="copyRight mt-3 d-flex justify-content-between">
+          <div class="content text-center text-md-left">Copyright &copy; 2020 -<span class="mx-1" id="js-current-year">2050</span>
+            <svg class="mx-1 bi bi-code" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z"> </path>
+            </svg> with 
+            <svg class="bi bi-heart-fill mx-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewbox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"></path>
+            </svg>and 
+            <svg class="bi bi-cup-fill mx-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewbox="0 0 16 16">
+              <path d="M1 2a1 1 0 0 1 1-1h11a1 1 0 0 1 1 1v1h.5A1.5 1.5 0 0 1 16 4.5v7a1.5 1.5 0 0 1-1.5 1.5h-.55a2.5 2.5 0 0 1-2.45 2h-8A2.5 2.5 0 0 1 1 12.5V2zm13 10h.5a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.5-.5H14v8z"></path>
+            </svg> by <a class="text-light" href="https://github.com/mohammed-taysser">mohammed</a>
+          </div>
+          <div class="d-none d-md-inline-block text-right">
+            <svg class="bi bi-instagram text-light mr-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewbox="0 0 16 16">
+              <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"></path>
+            </svg>
+            <svg class="bi bi-github text-light mr-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewbox="0 0 16 16">
+              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+            </svg>
+            <svg class="bi bi-youtube mr-2 text-light" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewbox="0 0 16 16">
+              <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="../javascript/build/glide.min.js"> </script>
+  <script src="../javascript/build/nice-select.min.js"> </script>
+  <script src="../javascript/build/scripts.min.js"> </script>
+</html>
