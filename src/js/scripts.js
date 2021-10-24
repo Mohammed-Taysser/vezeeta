@@ -1,7 +1,40 @@
 
-// Toggle menu on navbar
+// Needed variables
 const close_button = document.getElementById('js-menu-toggle'),
-    menu_links = document.querySelector('#main-links ul');
+    menu_links = document.querySelector('#main-links ul'),
+    array_of_select_id = [
+        'js-city-select',
+        'js-specialist-select',
+        'js-area-select',
+        'js-select-result-order',
+    ],
+    array_of_slider_id = [
+        'js-doctor-services',
+        'js-specializes',
+        'js-offers',
+    ],
+    glide_slider_options = {
+        type: 'carousel',
+        perView: 4,
+        autoplay: 5000,
+        breakpoints: {
+            992: {
+                perView: 3,
+            },
+            768: {
+                perView: 2,
+            },
+            567: {
+                perView: 1,
+            },
+        },
+    },
+    current_year = document.getElementById('js-current-year'),
+    header_angle_down = document.querySelector('.angle-down a'),
+    hero_header_index_page = document.getElementById('js-header'),
+    login_input = document.querySelector('.login-form #email-input');
+
+// Toggle menu on navbar
 
 close_button.onclick = function (event) {
     'use strict';
@@ -10,37 +43,25 @@ close_button.onclick = function (event) {
     event.stopPropagation();
 };
 
-menu_links.onclick = function (e) {
+menu_links.onclick = function (event) {
     'use strict';
-    e.stopPropagation();
+    event.stopPropagation();
 };
+
 
 document.addEventListener('click', event => {
     'use strict';
-    if (event.target !== menu_links && event.target !== close_button) {
-        if (menu_links.classList.contains('open')) {
-            menu_links.classList.toggle('open');
-            close_button.classList.toggle('open');
-        }
+    const event_condition = event.target !== menu_links
+        && event.target !== close_button
+        && menu_links.classList.contains('open');
+
+    if (event_condition) {
+        menu_links.classList.toggle('open');
+        close_button.classList.toggle('open');
     }
 });
 
 
-// Header carousel
-// Const header = document.querySelector('header');
-// SetInterval(function () {
-//     'use strict';
-//     Const random_image_number = Math.floor(Math.random() * 5) + 1;
-//     Header.style.opacity = 0;
-//     SetTimeout(function () {
-//         Header.style('background-image', `url('../images/header/header-${ random_image_number }.jpg')`);
-//     }, 1000);
-//     SetTimeout(function () {
-//         Header.style.opacity = 1;
-//     }, 1100);
-// }, 5000);
-
-const header_angle_down = document.querySelector('.angle-down a');
 if (header_angle_down) {
     header_angle_down.onclick = function () {
         'use strict';
@@ -51,42 +72,50 @@ if (header_angle_down) {
 }
 
 
-// // Rotate filter svg on click
-// Document.querySelector('.doctors .accordion ul li').on('click', function () {
-//     'use strict';
-//     Document.querySelector('.doctors .accordion ul li .arrow').removeClass('rotate--90');
-//     This.children('.arrow').toggleClass('rotate--90');
-// });
-
-
-// // Show current year on footer
-const current_year = document.getElementById('js-current-year');
-current_year.textContent = new Date().getFullYear().toString();
-
 // Replace email input with tel if start by number
-// Document.querySelector('.login-form #email-input').onKeyup = function () {
-//     'use strict';
-//     If (!isNaN(this.value[0])) {
-//         This.type = 'tel';
-//     } else {
-//         This.type = 'email';
-//     }
-// };
+if (login_input) {
+    login_input.onKeyup = function () {
+        'use strict';
+        if (!isNaN(this.value[0])) {
+            this.type = 'tel';
+        }
+        this.type = 'email';
+    };
+}
 
-const city_select = document.getElementById('js-city-select')
-    , specialist_select = document.getElementById('js-specialist-select')
-    , area_select = document.getElementById('js-area-select'),
-    order_result = document.getElementById('select-result-order');
 
-if (city_select) {
-    NiceSelect.bind(document.getElementById('js-city-select'));
+// Nice select plugin 
+
+array_of_select_id.forEach(selector_id => {
+    'use strict';
+    const temp = document.getElementById(selector_id);
+    if (temp) {
+        NiceSelect.bind(temp);
+    }
+});
+
+// Glide slider
+
+array_of_slider_id.forEach(slider_id => {
+    'use strict';
+    const temp = document.getElementById(slider_id);
+    if (temp) {
+        new Glide(temp, glide_slider_options).mount();
+    }
+});
+
+function setWindowHeight() {
+    'use strict';
+    const window_height = window.innerHeight,
+        nav_height = document.querySelector('nav').clientHeight;
+    hero_header_index_page.style.height = `${window_height - nav_height}px`;
 }
-if (specialist_select) {
-    NiceSelect.bind(specialist_select);
+
+if(hero_header_index_page){
+    window.addEventListener('resize', setWindowHeight, false);
+    setWindowHeight();
 }
-if (area_select) {
-    NiceSelect.bind(area_select);
-}
-if(order_result){
-    NiceSelect.bind(order_result);
-}
+
+
+// Show current year on footer
+current_year.textContent = new Date().getFullYear().toString();
