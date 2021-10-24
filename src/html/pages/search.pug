@@ -1,0 +1,48 @@
+extends ../layouts/layout
+
+block title 
+	title Search
+
+block style 
+	link(rel="stylesheet", href="../css/search.min.css")
+
+block content 
+
+	include ../components/header
+
+	.doctors.skew-divider.py-5
+		.container.my-5.py-3.text-muted
+			.row.justify-content-center
+				.col-lg-4.my-3
+
+					include ../components/search/filter
+
+				.col-lg-8.my-3
+					.d-flex.justify-content-between.align-items-center
+						h4.my-3.align-self-center
+							| dentist 
+							small 465 doctors
+						.select-result
+							select#js-select-result-order(name='order_select')
+								option(value='3' selected='') best match
+								option(value='1') Some option
+								option(value='2') Another option
+								option(value='4') more option
+
+					include ../components/search/result
+
+		ul.pagination.justify-content-center
+			li.page-item.disabled
+				a(href="#" tabindex="-1") Previous
+			li.page-item.active
+				a(href="#") 1
+			li.page-item
+				a(href="#") 2
+			li.page-item
+				a(href="#") 3
+			li.page-item
+				span ...
+			li.page-item
+				a(href="#") 12
+			li.page-item
+				a(href="#") Next
