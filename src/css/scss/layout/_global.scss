@@ -36,6 +36,7 @@ body {
     content: "";
     position: absolute;
     display: block;
+    border-radius: 3px;
   }
 
   &::after {
@@ -48,14 +49,22 @@ body {
 
   &::before {
     width: 40px;
-    content: "";
     height: 3px;
     left: 40px;
     bottom: -4px;
     z-index: 1;
-    border-radius: 3px;
     background-color: $main-bg;
   }
+  &.text-center{
+    &::after {
+      left: calc(50% - 60px);
+    }
+  
+    &::before {
+      left: calc(50% - 20px);
+    }
+  }
+
 }
 
 .p-100 {
