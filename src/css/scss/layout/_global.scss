@@ -28,15 +28,34 @@ body {
 .transition {
   transition: 0.5s;
 }
-.special-header::before {
-  content: "";
-  display: block;
-  height: 3px;
-  width: 100px;
-  margin: 0 auto;
+.special-header {
   position: relative;
-  background-color: $main-bg;
-  top: 80px;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+  }
+
+  &::after {
+    width: 120px;
+    height: 1px;
+    background: #ddd;
+    bottom: -3px;
+    left: 0;
+  }
+
+  &::before {
+    width: 40px;
+    content: "";
+    height: 3px;
+    left: 40px;
+    bottom: -4px;
+    z-index: 1;
+    border-radius: 3px;
+    background-color: $main-bg;
+  }
 }
 
 .p-100 {
@@ -152,15 +171,15 @@ body {
 .news .news-item {
   height: 360px;
 }
-.news .news-item .img{
+.news .news-item .img {
   height: 250px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-.news .news-item .content{
+.news .news-item .content {
   /*height: 95px;*/
 }
-.news .news-item:hover .content{
+.news .news-item:hover .content {
   transform: translateY(-105px);
 }
